@@ -1,9 +1,10 @@
-#?/bin/bash
+#!/bin/bash
+
 csv_file="$1"
 #Create OU
-awk -F';' 'NR>1 {print $5}' "$csv_file" | sort | uniq | while read ou:
+awk -F ';' 'NR>1 {print $5}' "$csv_file" | sort | uniq | while read ou;
 do
-      samba-tool ou add OU="$ou",DC=au-team,DC=irpo:
+      samba-tool ou add OU="$ou",DC=au-team,DC=irpo;
 done
 
 #Create Users
@@ -15,13 +16,14 @@ do
       fi
 
       username="${firstName,,}.${lastName,,}"
-      address="${zip,,} ${country,,} ${city,,} ${street,,}"
+      address='${zip,,}.${country,,}.${city,,}.${street,,}'
+     
       samba-tool user add "$username" "$password" \
-          --given-name="$firstName" \a
-          --surname="$lastName"
-          --telephone-number="$phone"
-          --job-title="$role"
-          --userou="OU=$ou"
+          --given-name="$firstName" \
+          --surname="$lastName" \
+          --telephone-number="$phone" \
+          --job-title="$role" \
+          --userou="OU=$ou" \
           --physical-delivery-office="$address"
       samba-tool user setexpiry "$username" --noexpiry
 done < "$csv_file"
