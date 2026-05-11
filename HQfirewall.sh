@@ -15,4 +15,5 @@ iptables -t filter -A INPUT -p icmp -j ACCEPT
 iptables -t filter -A INPUT -s 10.0.0.0/30 -j ACCEPT
 iptables -t filter -A INPUT -s 172.16.1.0/28 -j ACCEPT
 iptables -t filter -A INPUT -p esp -j ACCEPT
+iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
 iptables -t filter -A INPUT -j DROP
