@@ -24,6 +24,6 @@ do
           --telephone-number="$phone" \
           --job-title="$role" \
           --userou="OU=$ou" \
-          --physical-delivery-office="$address" &
-      samba-tool user setexpiry "$username" --noexpiry &
+          --physical-delivery-office="$address"
+      samba-tool user setexpiry "$username" --noexpiry
 done < "$csv_file"
