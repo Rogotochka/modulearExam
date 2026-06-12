@@ -16,3 +16,6 @@
 	scp web.au-team.irpo.cer user@172.16.1.1:~/
 	scp docker.au-team.irpo.key user@172.16.1.1:~/
 	scp docker.au-team.irpo.cer user@172.16.1.1:~/
+
+	scp ca.cer user@192.168.2.2:~/
+	scp ca.cer user@192.168.2.3:~/
