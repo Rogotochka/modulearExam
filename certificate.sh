@@ -12,7 +12,7 @@
 	openssl x509 -req -in web.au-team.irpo.csr -CA ca.cer -CAkey ca.key -CAcreateserial -out web.au-team.irpo.cer -days 30
 	openssl x509 -req -in docker.au-team.irpo.csr -CA ca.cer -CAkey ca.key -CAcreateserial -out docker.au-team.irpo.cer -days 30
 
-	scp web.au-team.irpo.key root@172.16.1.1:~/
-	scp web.au-team.irpo.cer root@172.16.1.1:~/
-	scp docker.au-team.irpo.key root@172.16.1.1:~/
-	scp docker.au-team.irpo.cer root@172.16.1.1:~/
+	scp web.au-team.irpo.key user@172.16.1.1:~/
+	scp web.au-team.irpo.cer user@172.16.1.1:~/
+	scp docker.au-team.irpo.key user@172.16.1.1:~/
+	scp docker.au-team.irpo.cer user@172.16.1.1:~/
