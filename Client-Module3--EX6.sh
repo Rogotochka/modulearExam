@@ -13,3 +13,4 @@ EOF
 
 echo $my_uuid >> /etc/client.uuid
 scp -P 2026 /etc/client.uuid sshuser@192.168.1.2:~
+systemctl start netdata
