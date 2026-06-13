@@ -1,6 +1,7 @@
 apt-get update && apt-get install rsyslog -y
 systemctl enable --now rsyslog
-cat << EOF > /etc/rsyslod.d/00_common.conf
+sleep 5
+cat << EOF > /etc/rsyslog.d/00_common.conf
 #### MODULES ####
 
 #module(load="imjournal") # provides support for systemd-journald logging
