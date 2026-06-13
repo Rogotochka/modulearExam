@@ -1,8 +1,8 @@
 #!/bin/bash
 apt-get update && apt-get install fail2ban -y
-Systemctl enable fail2ban
-Systemctl start fail2ban
-Systemctl status fail2ban
+systemctl enable fail2ban
+systemctl start fail2ban
+systemctl status fail2ban
 
 cat << EOF > /etc/fail2ban/filter.d/mysshd.conf
 [Definition]
