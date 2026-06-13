@@ -39,3 +39,4 @@ EOF
 cat << EOF > /etc/ipsec.secrets
   172.16.2.2 172.16.1.2 : PSK "P@ssw0rd"
 EOF
+systemctl restart strongswan
