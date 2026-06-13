@@ -1,5 +1,5 @@
 #!/bin/bash
-apt-get update && apt-get install fail2ban
+apt-get update && apt-get install fail2ban -y
 Systemctl enable fail2ban
 Systemctl start fail2ban
 Systemctl status fail2ban
