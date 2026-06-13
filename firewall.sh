@@ -13,3 +13,5 @@ iptables -t filter -A INPUT -s 172.16.1.0/28 -j ACCEPT
 iptables -t filter -A INPUT -p esp -j ACCEPT
 iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
 iptables -t filter -A INPUT -j DROP
+
+iptables-save > /etc/iptables.rules
