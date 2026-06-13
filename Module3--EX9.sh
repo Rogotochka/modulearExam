@@ -4,7 +4,7 @@ Systemctl enable fail2ban
 Systemctl start fail2ban
 Systemctl status fail2ban
 
-cat << EOF > /etc/fail2ban/filted.d/mysshd.conf
+cat << EOF > /etc/fail2ban/filter.d/mysshd.conf
 [Definition]
 
 failregex = Failed password for .* from <HOST>
