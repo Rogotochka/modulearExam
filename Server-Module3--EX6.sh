@@ -11,3 +11,4 @@ rm -rf /etc/nginx/sites-available.d/default.conf
 cp ./default.conf /etc/nginx/sites-available.d/default.conf
 ln -s /etc/nginx/sites-available.d/default.conf /etc/nginx/sites-enabled.d/
 systemctl restart nginx
+systemctl restart netdata
