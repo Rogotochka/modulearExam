@@ -1,5 +1,5 @@
 apt-get update && apt-get install rsyslog -y
-systemctl enable --now rsyslog
+systemctl enable rsyslog
 sleep 5
 cat << EOF > /etc/rsyslog.d/00_common.conf
 #### MODULES ####
