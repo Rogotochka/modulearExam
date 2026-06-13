@@ -1,6 +1,6 @@
 #!/bin/bash
 apt update && apt install -y strongswan strongswan-pki
-sed -i 's/^install_routes = yes$/install_routes = no/' /etc/strongswan.d/charon.conf
+echo "install_routes = no" >> /etc/strongswan.d/charon.conf
 
 cat << EOF > /etc/ipsec.conf \
 # ipsec.conf - strongSwan IPsec configuration file
