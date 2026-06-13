@@ -37,5 +37,5 @@ include /var/lib/strongswan/ipsec.conf.inc
 EOF
 
 cat << EOF > /etc/ipsec.secrets \
-  172.16.1.2 172.16.2.2 : PSK "P@ssw0rd"
+  172.16.2.2 172.16.1.2 : PSK "P@ssw0rd"
 EOF
