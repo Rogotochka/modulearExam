@@ -27,4 +27,4 @@ enabled = yes
 default history = 3600
 allow from = *
 EOF
-Systemctl restart netdata
+systemctl restart netdata
